@@ -1,11 +1,7 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Threading.Tasks;
-
-namespace CardCollection
-{
-    public class _
-    {
-    }
-}
+﻿bin
+obj
+.vscode
+.DS_Store
+appsettings.json
+*.db
+.vs
