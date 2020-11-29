@@ -1,6 +1,6 @@
 ﻿using AutoMapper;
+using CardCollection.Domain.Models;
 using CardCollection.Dtos;
-using CardCollection.Models;
 using System;
 using System.Collections.Generic;
 using System.Linq;

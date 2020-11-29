@@ -4,18 +4,19 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Threading.Tasks;
 using AutoMapper;
-using CardCollection.Data;
+using CardCollection.Domain.Models;
 using CardCollection.Dtos;
 using CardCollection.Helpers;
-using CardCollection.Models;
+using CardCollection.Persistence.Data;
 using Microsoft.AspNetCore.Mvc;
 using Newtonsoft.Json;
+using Persistence.Data;
 
 namespace CardCollection.Controllers
 {
     [Route("api/[controller]")]
     [ApiController]
-    public class CardsController : Controller
+    public class CardsController : ControllerBase
     {
         private readonly ICardsRepository _repo;
         private readonly IMapper _mapper;

@@ -1,11 +1,9 @@
-﻿using CardCollection.Models;
-using System;
+﻿using CardCollection.Domain.Models;
+using Persistence.Data;
 using System.Collections.Generic;
-using System.Linq;
 using System.Threading.Tasks;
-using CardCollection.Helpers;
 
-namespace CardCollection.Data
+namespace CardCollection.Persistence.Data
 {
     public interface ICardsRepository
     {

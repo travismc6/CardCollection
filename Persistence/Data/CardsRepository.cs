@@ -1,12 +1,12 @@
-﻿using CardCollection.Models;
+﻿using CardCollection.Domain.Models;
 using Microsoft.EntityFrameworkCore;
+using Persistence.Data;
 using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Threading.Tasks;
-using CardCollection.Helpers;
 
-namespace CardCollection.Data
+namespace CardCollection.Persistence.Data
 {
     public class CardsRepository : ICardsRepository
     {

@@ -3,7 +3,6 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Threading.Tasks;
 using AutoMapper;
-using CardCollection.Data;
 using Microsoft.AspNetCore.Builder;
 using Microsoft.AspNetCore.Hosting;
 using Microsoft.AspNetCore.HttpsPolicy;
@@ -13,6 +12,10 @@ using Microsoft.Extensions.DependencyInjection;
 using Microsoft.Extensions.Hosting;
 using Microsoft.Extensions.Logging;
 using Microsoft.EntityFrameworkCore;
+using MediatR;
+using CardCollection.Persistence.Data;
+using CardCollection.Dtos;
+using CardCollection.Domain.Models;
 
 namespace CardCollection
 {
@@ -39,7 +42,9 @@ namespace CardCollection
 
             services.AddCors();
 
-            services.AddAutoMapper(typeof(Startup));
+            services.AddAutoMapper(typeof(CardSetDto),
+                typeof(CardSet));
+            //services.AddMediatR(typeof(CardSetDto).Assembly);
         }
 
         // This method gets called by the runtime. Use this method to configure the HTTP request pipeline.

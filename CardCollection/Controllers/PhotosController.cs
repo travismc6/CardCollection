@@ -1,13 +1,10 @@
-﻿using System;
-using System.Collections;
-using System.Collections.Generic;
-using System.Linq;
+﻿using System.Linq;
 using System.Threading.Tasks;
 using AutoMapper;
-using CardCollection.Data;
+using CardCollection.Domain.Models;
 using CardCollection.Dtos;
 using CardCollection.Helpers;
-using CardCollection.Models;
+using CardCollection.Persistence.Data;
 using CloudinaryDotNet;
 using CloudinaryDotNet.Actions;
 using Microsoft.AspNetCore.Mvc;
