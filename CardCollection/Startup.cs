@@ -40,7 +40,12 @@ namespace CardCollection
 
             services.AddDbContext<DataContext> (options => options.UseSqlServer(connection));
 
-            services.AddCors();
+            services.AddCors(opt => {
+                opt.AddPolicy("CorsPolicy", policy =>
+                {
+                    policy.AllowAnyHeader().AllowAnyMethod().WithOrigins("http://localhost:3000");
+                });
+            });
 
             services.AddAutoMapper(typeof(CardSetDto),
                 typeof(CardSet));
@@ -60,6 +65,8 @@ namespace CardCollection
             app.UseRouting();
 
             app.UseAuthorization();
+
+            app.UseCors("CorsPolicy");
 
             app.UseEndpoints(endpoints =>
             {
