@@ -1,5 +1,6 @@
 ﻿using System;
 using System.Collections.Generic;
+using System.ComponentModel.DataAnnotations;
 using System.Linq;
 using System.Threading.Tasks;
 
@@ -9,7 +10,7 @@ namespace CardCollection.Dtos
     {
         public int CollectionId { get; set; }
         //list of sets
-        public List<SetForChecklistDto> Sets = new List<SetForChecklistDto>();
+        public ICollection<SetForChecklistDto> Sets { get; set; }
     }
 
     public class SetForChecklistDto
@@ -27,6 +28,7 @@ namespace CardCollection.Dtos
 
     public class CardForChecklistDto
     {
+        [Key]
         public int Id { get; set; }
         public string Number { get; set; }
         public string PlayerName { get; set; }

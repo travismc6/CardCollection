@@ -49,7 +49,7 @@ namespace CardCollection
 
             services.AddAutoMapper(typeof(CardSetDto),
                 typeof(CardSet));
-            //services.AddMediatR(typeof(CardSetDto).Assembly);
+            services.AddMediatR(typeof(CardSetDto).Assembly);
         }
 
         // This method gets called by the runtime. Use this method to configure the HTTP request pipeline.

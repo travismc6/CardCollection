@@ -45,7 +45,7 @@ namespace CardCollection.Controllers
                 collectionId = 1;
             }
 
-            CardsForChecklistDto dto = new CardsForChecklistDto { CollectionId = collectionId.Value };
+            var dto = new CardsForChecklistDto { CollectionId = collectionId.Value, Sets = new List<SetForChecklistDto>() };
 
             var cards = await _repo.GetCards(cardParams);
 
@@ -67,7 +67,7 @@ namespace CardCollection.Controllers
 
                 foreach (var c in s.OrderBy(r => r.Number, new NumberComparer()))
                 {
-                    CardForChecklistDto cardDto = new CardForChecklistDto()
+                    var cardDto = new CardForChecklistDto()
                     {
                         Brand = c.CardSet.Brand,
                         PlayerName = c.Name,
@@ -77,6 +77,7 @@ namespace CardCollection.Controllers
                         SetName = c.CardSet.Name,
                         Number = c.Number,
                         HasCard = mycards.Any(x => x.CardId == c.Id)
+                        
                     };
 
                     setDto.Cards.Add(cardDto);

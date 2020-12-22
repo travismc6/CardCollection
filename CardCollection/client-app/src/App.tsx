@@ -1,12 +1,16 @@
-import React from 'react';
+import React, { Fragment } from 'react';
 import logo from './logo.svg';
 import './App.css';
-import Header from 'semantic-ui-react/dist/commonjs/elements/Header/Header';
+import { Route } from 'react-router-dom';
+import CardChecklist from './components/CardChecklist/CardChecklist';
 
-export default function App() {
+const App = () => {
     return (
-        <Header as="h2" >
-            <Header.Content>Card Collection</Header.Content>
-        </Header >
+        <Fragment>
+            <Route exact path='/' component={CardChecklist} />
+        </Fragment>
     );
 }
+
+export default App;
+
