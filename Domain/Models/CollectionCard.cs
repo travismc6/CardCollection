@@ -6,9 +6,10 @@ namespace CardCollection.Domain.Models
     {
         public int Id { get; set; }
         public int CardId { get; set; }
-        public int Condition { get; set; }
+        public double Grade { get; set; }
         public string Notes { get; set; }
         public int CollectionId { get; set; }
+        public string PhotoUrl { get; set; }
 
         public ICollection<Photo> Photos { get; set; }
 

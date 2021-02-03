@@ -11,9 +11,10 @@ namespace CardCollection.Domain.Models
         public int Id { get; set; }
         public string Number { get; set; }
         public string Name { get; set; }
+        public double Grade { get; set; }
         public string Notes { get; set; }
-        public Photo StockPhoto { get; set; }
-
+        public Photo Photo { get; set; }
+        public string PhotoLink { get; set; }
         public int CardSetId { get; set; }
 
         public CardSet CardSet { get; set; }
